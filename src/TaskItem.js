@@ -1,6 +1,5 @@
-export const TaskItem = ({ isChecked, taskName}) => {
+export const TaskItem = ({ isChecked, taskName, onTaskChange}) => {
 
-    
 
     const styleOfTheComponent = {
         textDecoration: isChecked ? "line-through" : "",
@@ -9,7 +8,7 @@ export const TaskItem = ({ isChecked, taskName}) => {
 
     return (
         <li>
-            <input cheked={isChecked} type="checkbox"/>
+            <input onChange={onTaskChange} cheked={isChecked} type="checkbox"/>
             <span style={styleOfTheComponent}>{taskName}</span>
         </li>
 
